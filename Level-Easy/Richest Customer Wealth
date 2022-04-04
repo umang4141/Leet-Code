@@ -1,0 +1,29 @@
+package Megagfg;
+import java.util.*;
+import java.io.*;
+public class RichestCustomerWealth {
+
+   public static void rich_res(int mat[][],int n,int m)
+   {
+	    int sum = 0;
+	    int max = Integer.MIN_VALUE;
+	    for(int i =0;i<n;i++)
+	    {    
+	    	sum = 0;
+	    	for(int j=0;j<m;j++)
+         {
+	    		sum = sum + mat[i][j];
+	    	}
+	    	max = Math.max(sum,max);
+	    }
+	    System.out.println(max);
+   }
+   public static void main(String args[]) {
+	   
+	   Scanner sc = new Scanner(System.in);
+	   int mat[][] = {{2,8,7},{7,1,3},{1,9,5}};
+	   int n = mat.length;
+	   int m = mat[0].length;
+	   rich_res(mat,n,m);
+   }
+}
