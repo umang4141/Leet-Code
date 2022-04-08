@@ -1,0 +1,44 @@
+ package Megagfg;
+import java.io.*;
+import java.util.*;
+
+public class ShuffleString {
+	public static void Address(String[] patterns,String word)
+	{     
+		int count = 0;
+		String ans = "";
+		for(int i = 0;i<patterns.length;i++)
+		{
+		   if(patterns[i] != " ")
+		   {
+			   ans = ans + patterns[i];
+		   }
+			
+		   System.out.println(ans);
+		   if(word.contains(ans))
+		   {
+			   count++;
+
+		   }
+		   ans = "";
+		   
+		   
+		}
+		System.out.print(count);
+
+		
+		
+	}
+		
+	
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  Scanner sc =  new Scanner(System.in);
+		  String[] patterns = {"a","b","c"};
+		  String word ="aaaaabbbbb";
+		  //int arr[] = {0,1,2};
+		  //str = sc.nextLine();
+		  Address(patterns,word);
+	}
+}
