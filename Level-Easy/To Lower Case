@@ -1,0 +1,26 @@
+ package Megagfg;
+import java.io.*;
+import java.util.*;
+
+public class ShuffleString {
+	public static void Address(String str1,String str2[])
+	{     
+		int count = 0;
+		String ans = "";
+		
+		ans = (str1.toLowerCase());
+		System.out.print(ans);
+		}
+		
+	
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  Scanner sc =  new Scanner(System.in);
+		  String str1 ="ABcDEFGHI";
+		  String str2[] = {"a","b","c","ab","ac","bc","abc"};
+		  //int arr[] = {0,1,2};
+		  //str = sc.nextLine();
+		  Address(str1,str2);
+	}
+}
