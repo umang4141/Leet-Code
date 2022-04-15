@@ -1,0 +1,16 @@
+Set<Integer> intersect=new HashSet<>();
+    Set<Integer> baseValues=new HashSet<>();
+    for (int i = 0; i < nums1.length; i++) {
+        baseValues.add(nums1[i]);
+    }
+    for (int i = 0; i < nums2.length; i++) {
+        if(baseValues.contains(nums2[i]))
+            intersect.add(nums2[i]);
+    }
+    int i=0;
+    int[] intersectArr=new int[intersect.size()];
+    for(int val:intersect){
+        intersectArr[i++]=val;
+    }
+    return intersectArr;
+}
