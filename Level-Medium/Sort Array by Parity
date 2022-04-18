@@ -1,0 +1,40 @@
+package leeeetcodeee;
+import java.util.*;
+
+public class SortEvenandOddIndicesIndependently {
+
+	public static void find(int []nums)
+	{
+      
+      int starting = 0;
+      int end = nums.length - 1;
+      int arr[] = new int[nums.length];
+      int k = 0;
+      for(int i=0;i<nums.length;i++)
+      {
+    	  if(nums[i] % 2 == 0)
+    	  {
+    		  arr[starting++] = nums[i]; 
+    		
+    	  }
+    	  else
+    	  {
+    		  arr[end--] = nums[i];
+    		
+    	  }
+      }
+      for(k = 0;k<arr.length;k++)
+      {
+    	  System.out.print(arr[k] + " ");
+      }
+	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int nums[] = {4,1,2,3};
+		find(nums);
+
+	}
+
+}
