@@ -1,0 +1,38 @@
+package leeeetcodeee;
+import java.util.*;
+
+public class SortEvenandOddIndicesIndependently {
+
+	public static void find(int []nums)
+	{
+		List<Integer> oddIndexValues = new ArrayList<>();
+        List<Integer> evenIndexValues = new ArrayList<>();
+        for(int i=0;i<nums.length;i++) {
+            if(i%2 == 0) {
+                evenIndexValues.add(nums[i]);
+            } else {
+                oddIndexValues.add(nums[i]);
+            }
+        }
+        Collections.sort(oddIndexValues, Collections.reverseOrder());
+        Collections.sort(evenIndexValues);
+        for(int i=0;i<nums.length;i+=2) {
+            nums[i] = evenIndexValues.get(i/2);
+            System.out.print(nums[i] + " ");
+        }
+        for(int i=1;i<nums.length;i+=2) {
+            nums[i] = oddIndexValues.get(i/2);
+            System.out.print(nums[i] + " ");
+        }
+      
+	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int nums[] = {4,1,2,3};
+		find(nums);
+
+	}
+
+}
