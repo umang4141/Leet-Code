@@ -1,0 +1,27 @@
+package leeeetcodeee;
+import  java.util.*;
+public class GFG {
+	 
+     static void  InvolutoryMatrix(int mat[])
+	    {
+    	 int sum=0,sum1=0;
+    	 Arrays.sort(mat);
+	    for(int i = 0; i< mat.length;i++) {
+	    	sum = sum + mat[i];
+	    	sum1 = mat[0] + mat[mat.length-1];
+	    }
+	      double ans = (double)(sum-sum1)/(double)(mat.length-2);
+	      System.out.println(ans);
+
+	    }       
+	      
+	  public static void main (String[] args)
+	    {
+	         
+	        int mat[]= {4000,3000,1000,2000};
+	        InvolutoryMatrix(mat);    
+	    }
+}
+		
+
+
