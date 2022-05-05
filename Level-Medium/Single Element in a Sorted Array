@@ -1,0 +1,47 @@
+package leeeetcodeee;
+import java.util.*;
+public class Snakecase {
+	
+	    //using counter to print all possible sub-sequences
+	    public static void PrintAllSubarrays(int arr[])
+	    {
+	       int n = arr.length;
+	     // int res[] = new int[n];
+	       int i=0;
+	       int res1 = Integer.MIN_VALUE;
+	       if(arr.length==1)
+	       {
+	    	   res1 = arr[0];
+	       }
+	       else
+	       {
+	       while(i < arr.length-2) {
+	    	   if(arr[i] == arr[i+1])
+	    	   {
+	    		   i=i+2;
+	    	   }
+	    	   else
+	    	   {
+	    		   res1 = arr[i];
+	    		   break;
+	    	   }
+	       }
+	       if(res1 == Integer.MIN_VALUE)
+	       {
+	    	   System.out.print(arr[arr.length-1]);
+	       }
+	       else
+	       {
+	    	   System.out.print(res1);
+	       }
+	    }
+	  }
+	   
+		
+		public static void main(String[] args)  
+	    { 
+	        Scanner sr = new Scanner(System.in);
+	        int arr[] = {1,1,2,3,3,4,4,8,8};
+	       
+	    }
+}
